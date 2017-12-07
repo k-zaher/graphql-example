@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: graphql_example_development
+  username: postgres
+  password:
+  host: postgres
+
+test:
+  <<: *default
+  database: graphql_example_test
+  username: postgres
+  password:
+  host: postgres
